@@ -62,6 +62,13 @@ fetch(URL)
             // Nom du pays
            row.insertCell(5).textContent = user.location.country;
 
+           // Affichage du drapeau 
+                //Création de la cellule du drapeau
+                var flagCell = row.insertCell(6);
+                let flag = user.nat;
+                // On réduit les nationnaliés majuscules pour les afficher dans le code
+                flag = flag.toLowerCase();
+                flagCell.innerHTML = "<span class='fi fi-" + flag + "'></span>";
         })
     }
 )
